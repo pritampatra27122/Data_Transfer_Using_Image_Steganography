@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Make the page invisible until all HTML elements have been loaded
+	 to prevent a flash of unstyled content -->
+	<style>
+		html {
+			display: none;
+		}
+	</style>
+
+	<!-- Basic page needs -->
+	<meta charset="utf-8">
+	<title>Secure Data Transfer</title>
+
+	<!-- Mobile specific values -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Load the font -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- Load skeleton CSS files -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+	{% block scripts %} {% endblock %}
+
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="container">
+			<ul class="navbar-list">
+				<li class="navbar-item"><a class="navbar-link" href="{{ url_for('encode') }}">Encode</a></li>
+				<li class="navbar-item"><a class="navbar-link" href="{{ url_for('decode') }}">Decode</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		{% block body %} {% endblock %}
+	</div>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</body>
+
+</html>

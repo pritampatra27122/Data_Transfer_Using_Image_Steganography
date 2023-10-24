@@ -1,0 +1,5 @@
+__pycache__/
+encoded.png
+secret.txt
+*.pyc
+uploads/

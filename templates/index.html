@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container" style="text-align: center;">
+	
+	<h2 class="title">Secure Data Transfer using Image Steganography</h2>
+
+</div>
+
+<div class="docs-section" style="text-align: center;">
+	<h3 class="docs-header">Select an operation to Perform: </h3>
+	<div class="u-full-width">
+		<a class="button button-primary" href="{{ url_for('encode') }}">Encode</a>
+	</div>
+	<div class="u-full-width">
+		<a class="button button-primary" href="{{ url_for('decode') }}">Decode</a>
+	</div>
+</div>
+
+{% endblock %}

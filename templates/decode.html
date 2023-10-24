@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<h3 class="title"><b>Decode: find a secret message inside an image</b></h3>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+	<div class="row">
+		<label for="image-id">Select an image</label>
+		<input class="u-full-width" type="file" id="image-id" name="file">
+	</div>
+	<input class="button-primary" type="submit" id="submit-id" value="Decode!">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+This is a simple short file with not so strange characters.
+¿?()=/(&%$#@[]{}^';:\
+0123456789+/*-
